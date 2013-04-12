@@ -1,10 +1,10 @@
+#ifndef TYPES_H_
+#define TYPES_H_
+
 #include <avr/pgmspace.h>
 
-#if !defined(types_H)
-#define types_H
-
 typedef unsigned char BYTE;
-typedef unsigned short WORD;		// a 16 bit value, processor dependant
+typedef unsigned short WORD;        // a 16 bit value, processor dependant
 typedef unsigned char PROGMEM PBYTE;
 
-#endif
+#endif /* TYPES_H_ */

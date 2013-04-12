@@ -2,18 +2,18 @@
 
 const PBYTE widtbl_S[104] =
 {
-        3, 3, 3, 5, 5, 5, 5, 3, 
-        3, 3, 5, 5, 2, 5, 1, 5, 
-        5, 5, 5, 5, 5, 5, 5, 5, 
-        5, 5, 1, 2, 4, 4, 4, 5, 
-        5, 5, 5, 5, 5, 5, 5, 5, 
-        5, 3, 5, 5, 4, 5, 5, 5, 
-        5, 5, 5, 5, 5, 5, 5, 7, 
-        5, 5, 5, 3, 5, 3, 5, 5, 
-        3, 4, 5, 4, 5, 4, 4, 4, 
-        5, 2, 3, 4, 3, 6, 5, 4, 
-        5, 5, 5, 4, 3, 5, 5, 5, 
-        5, 4, 4, 3, 3, 3, 2, 0, 
+        3, 3, 3, 5, 5, 5, 5, 3,
+        3, 3, 5, 5, 2, 5, 1, 5,
+        5, 5, 5, 5, 5, 5, 5, 5,
+        5, 5, 1, 2, 4, 4, 4, 5,
+        5, 5, 5, 5, 5, 5, 5, 5,
+        5, 3, 5, 5, 4, 5, 5, 5,
+        5, 5, 5, 5, 5, 5, 5, 7,
+        5, 5, 5, 3, 5, 3, 5, 5,
+        3, 4, 5, 4, 5, 4, 4, 4,
+        5, 2, 3, 4, 3, 6, 5, 4,
+        5, 5, 5, 4, 3, 5, 5, 5,
+        5, 4, 4, 3, 3, 3, 2, 0,
         7, 7, 7, 7, 7, 7, 7, 7
 };
 
@@ -126,17 +126,17 @@ const PBYTE chr_S_87[7] = { 0x1C, 0x22, 0x45, 0x49, 0x41, 0x22, 0x1C };
 
 const PBYTE * PROGMEM chrtbl_S[104] =
 {
-           chr_S_20, chr_S_21, chr_S_22, chr_S_23, chr_S_24, chr_S_25, chr_S_26, chr_S_27, 
-           chr_S_28, chr_S_29, chr_S_2A, chr_S_2B, chr_S_2C, chr_S_2D, chr_S_2E, chr_S_2F, 
-           chr_S_30, chr_S_31, chr_S_32, chr_S_33, chr_S_34, chr_S_35, chr_S_36, chr_S_37, 
-           chr_S_38, chr_S_39, chr_S_3A, chr_S_3B, chr_S_3C, chr_S_3D, chr_S_3E, chr_S_3F, 
-           chr_S_40, chr_S_41, chr_S_42, chr_S_43, chr_S_44, chr_S_45, chr_S_46, chr_S_47, 
-           chr_S_48, chr_S_49, chr_S_4A, chr_S_4B, chr_S_4C, chr_S_4D, chr_S_4E, chr_S_4F, 
-           chr_S_50, chr_S_51, chr_S_52, chr_S_53, chr_S_54, chr_S_55, chr_S_56, chr_S_57, 
-           chr_S_58, chr_S_59, chr_S_5A, chr_S_5B, chr_S_5C, chr_S_5D, chr_S_5E, chr_S_5F, 
-           chr_S_60, chr_S_61, chr_S_62, chr_S_63, chr_S_64, chr_S_65, chr_S_66, chr_S_67, 
-           chr_S_68, chr_S_69, chr_S_6A, chr_S_6B, chr_S_6C, chr_S_6D, chr_S_6E, chr_S_6F, 
-           chr_S_70, chr_S_71, chr_S_72, chr_S_73, chr_S_74, chr_S_75, chr_S_76, chr_S_77, 
-           chr_S_78, chr_S_79, chr_S_7A, chr_S_7B, chr_S_7C, chr_S_7D, chr_S_7E, chr_S_7F, 
+           chr_S_20, chr_S_21, chr_S_22, chr_S_23, chr_S_24, chr_S_25, chr_S_26, chr_S_27,
+           chr_S_28, chr_S_29, chr_S_2A, chr_S_2B, chr_S_2C, chr_S_2D, chr_S_2E, chr_S_2F,
+           chr_S_30, chr_S_31, chr_S_32, chr_S_33, chr_S_34, chr_S_35, chr_S_36, chr_S_37,
+           chr_S_38, chr_S_39, chr_S_3A, chr_S_3B, chr_S_3C, chr_S_3D, chr_S_3E, chr_S_3F,
+           chr_S_40, chr_S_41, chr_S_42, chr_S_43, chr_S_44, chr_S_45, chr_S_46, chr_S_47,
+           chr_S_48, chr_S_49, chr_S_4A, chr_S_4B, chr_S_4C, chr_S_4D, chr_S_4E, chr_S_4F,
+           chr_S_50, chr_S_51, chr_S_52, chr_S_53, chr_S_54, chr_S_55, chr_S_56, chr_S_57,
+           chr_S_58, chr_S_59, chr_S_5A, chr_S_5B, chr_S_5C, chr_S_5D, chr_S_5E, chr_S_5F,
+           chr_S_60, chr_S_61, chr_S_62, chr_S_63, chr_S_64, chr_S_65, chr_S_66, chr_S_67,
+           chr_S_68, chr_S_69, chr_S_6A, chr_S_6B, chr_S_6C, chr_S_6D, chr_S_6E, chr_S_6F,
+           chr_S_70, chr_S_71, chr_S_72, chr_S_73, chr_S_74, chr_S_75, chr_S_76, chr_S_77,
+           chr_S_78, chr_S_79, chr_S_7A, chr_S_7B, chr_S_7C, chr_S_7D, chr_S_7E, chr_S_7F,
            chr_S_80, chr_S_81, chr_S_82, chr_S_83, chr_S_84, chr_S_85, chr_S_86, chr_S_87
 };
