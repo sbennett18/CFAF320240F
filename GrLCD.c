@@ -1,5 +1,3 @@
-#include <avr/io.h>
-#include <avr/pgmspace.h>
 #include <stdlib.h>
 #include "typedefs.h"
 #include "cfaf320.h"
@@ -15,15 +13,15 @@
   LCD display constants
  ***************************************/
 static const WORD JustHrz[8] = {    // text location table
-    0, NR_COLS/4                    // L00J,L25J
-    NR_COLS/3, NR_COLS/2            // L33J,C50J
-    (NR_COLS*2)/3, (NR_COLS*3)/4    // R66J,R75J
+    0, NR_COLS/4,                   // L00J,L25J
+    NR_COLS/3, NR_COLS/2,           // L33J,C50J
+    (NR_COLS*2)/3, (NR_COLS*3)/4,   // R66J,R75J
     NR_COLS, 0                      // R100J,ABSJ
 };
 static const WORD JustVrt[8] = {    // text location table
-    0, NR_ROWS/4                    // L00J,L25J
-    NR_ROWS/3, NR_ROWS/2            // L33J,C50J
-    (NR_ROWS*2)/3, (NR_ROWS*3)/4    // R66J,R75J
+    0, NR_ROWS/4,                   // L00J,L25J
+    NR_ROWS/3, NR_ROWS/2,           // L33J,C50J
+    (NR_ROWS*2)/3, (NR_ROWS*3)/4,   // R66J,R75J
     NR_ROWS, 0                      // R100J,ABSJ
 };
 
@@ -283,8 +281,7 @@ void LCDChar(char chr)
     const PBYTE * bitp;                     // pointer to flash memory space
     BYTE bits, mask;
 
-    switch (font)                           // get the font information
-    {
+    switch (font) {                         // get the font information
         case FONT_M:                        // med font
             if (chr < firstchr_M) return;   // char code out of range
             a = chr - firstchr_M;

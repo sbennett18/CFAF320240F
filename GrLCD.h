@@ -1,19 +1,21 @@
 #ifndef GRLCD_H_
 #define GRLCD_H_
 
+/****************/
 /* Display size */
-
+/****************/
 #define NR_COLS 320
 #define LASTCOL (NR_COLS - 1)
 #define NR_ROWS 240
 #define LASTROW (NR_ROWS - 1)
 
+/**********************************/
 /* SSD2119 controller entry modes */
-
+/**********************************/
 #define WRTDWN  0x6878          // Rows downward, cols rightward, 0°
-#define WRTRGT  x6870           // Rows rightward, cols upward, 90°
-#define WRTUP   x6848           // Rows upward, cols leftward, 180°
-#define WRTLFT  x6860           // Rows leftward, cols downward, 270°
+#define WRTRGT  0x6870           // Rows rightward, cols upward, 90°
+#define WRTUP   0x6848           // Rows upward, cols leftward, 180°
+#define WRTLFT  0x6860           // Rows leftward, cols downward, 270°
 
 typedef struct
 {
@@ -26,13 +28,14 @@ typedef struct
     char *text;                 // Pointer to null terminated string
 } String_T;
 
+/***************************************************/
 /* Text string display control/justification codes */
-
-#define FONT_Hi     4           // Huge font
-#define FONT_Gi     3           // Great font
-#define FONT_Li     2           // Large font
-#define FONT_Mi     1           // Med font
-#define FONT_Si     0           // Small font
+/***************************************************/
+#define FONT_H      4           // Huge font
+#define FONT_G      3           // Great font
+#define FONT_L      2           // Large font
+#define FONT_M      1           // Med font
+#define FONT_S      0           // Small font
 
 #define ROTN        0xC0        // Bit mask
 #define ROT270      0xC0        // 270° CCW, top to bottom

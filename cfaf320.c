@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <avr/io.h>
 #include "typedefs.h"
 #include "GrLCD.h"
 #include "cfaf320.h"
@@ -10,16 +9,22 @@ char txtbuf[40];
 
 
 /*************************************************/
-void delay(WORD t)
+void delay(WORD cycles)
 {
-    BYTE t1;
-
-    while(t--) {
-        for(t1 = 11; t1 > 0; t1--) {
-            asm("nop");
-        }
-    }
+   while (cycles > 15)                       // 15 cycles consumed by overhead
+      cycles = cycles - 6;                   // 6 cycles consumed each iteration
 }
+
+//void delay(WORD t)
+//{
+//    BYTE t1;
+//
+//    while (t--) {
+//        for (t1 = 11; t1 > 0; t1--) {
+//            asm("nop");
+//        }
+//    }
+//}
 
 
 /*************************************************/
@@ -41,11 +46,11 @@ void display_rgb(WORD data)
 /*************************************************/
 int main(void)
 {
-    DIR_MD = OUTS;          // Mode Port, Output
-    CTRL = 0xFF;            // all control bits high
-    DIR_CT = OUTS;          // Control Port, Output
-    DIR_HI = OUTS;          // Data 8-15, Output
-    DIR_LO = OUTS;          // Data 0-7, Output
+    DIR_MD  = OUTS;         // Mode Port, Output
+    CTL     = 0xFF;        	// all control bits high
+    DIR_CTL = OUTS;         // Control Port, Output
+    DIR_HI  = OUTS;         // Data 8-15, Output
+    DIR_LO  = OUTS;         // Data 0-7, Output
 
 #ifdef BIT16
     MODE = M80_16;          // 8080 16 bit mode

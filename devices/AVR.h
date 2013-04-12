@@ -2,6 +2,7 @@
 #define AVR_DEV_H_
 
 #include <avr/pgmspace.h>
+#include <avr/io.h>
 
 typedef unsigned char  BYTE;
 typedef unsigned short WORD;    // a 16 bit value, processor dependant
