@@ -8,19 +8,19 @@
 String_T strg = { 0, 0, 0, 0, 0, 0, 0 };    // string structure for text display
 char txtbuf[40];
 
+
 /*************************************************/
 void delay(WORD t)
 {
     BYTE t1;
 
-    while(t--)
-    {
-        for(t1 = 11; t1 > 0; t1--)
-        {
+    while(t--) {
+        for(t1 = 11; t1 > 0; t1--) {
             asm("nop");
         }
     }
 }
+
 
 /*************************************************/
 void display_rgb(WORD data)
@@ -36,6 +36,7 @@ void display_rgb(WORD data)
         }
     }
 }
+
 
 /*************************************************/
 int main(void)
@@ -105,9 +106,9 @@ int main(void)
     sprintf(txtbuf, "Fonts !");
     LCDText(&strg);         // display text
 
-    while (1)
-    {
-        PORTD ^= 2;         // blink the led
+    DIR_LED |= PIN_LED;
+    while (1) {
+        OUT_LED ^= PIN_LED; // blink the led
         delay(0xFFFF);
     }
     return 0;

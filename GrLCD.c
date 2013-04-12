@@ -10,10 +10,10 @@
 #include "helvb10.h"
 #include "timesb12.h"
 
-/***************************************
-  lcd display constants
- ***************************************/
 
+/***************************************
+  LCD display constants
+ ***************************************/
 static const WORD JustHrz[8] = {    // text location table
     0, NR_COLS/4                    // L00J,L25J
     NR_COLS/3, NR_COLS/2            // L33J,C50J
@@ -74,10 +74,10 @@ static const WORD LCDIni[] =
     0xFFFF, 0xFFFF
 };
 
+
 /***********************************************************
   Initialize display
  ***********************************************************/
-
 void LCDInit(void)
 {
     const WORD * ptr;
@@ -96,10 +96,10 @@ void LCDInit(void)
     LCDClear(0, NR_ROWS);           // clear data mamory
 }
 
+
 /***********************************************************
   Write command to LCD controller
  ***********************************************************/
-
 void LCDCmd(WORD arg)
 {
     CLR(CS);

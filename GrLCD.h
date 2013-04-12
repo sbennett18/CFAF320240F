@@ -15,30 +15,6 @@
 #define WRTUP   x6848           // Rows upward, cols leftward, 180°
 #define WRTLFT  x6860           // Rows leftward, cols downward, 270°
 
-/* Ports for LCD control & data bus */
-
-#define RD      0x80            // Control bits
-#define WR      0x40
-#define CD      0x20
-#define CS      0x10
-#define RES     8
-
-#define MODE    PORTD           // Output ports
-#define CTRL    PORTC
-#define OUT_LO  PORTE
-#define OUT_HI  PORTA
-#define IN_LO   PINE            // Input ports
-#define IN_HI   PINA
-#define DIR_HI  DDRA            // Direction registers
-#define DIR_CT  DDRC
-#define DIR_MD  DDRD
-#define DIR_LO  DDRE
-#define OUTS    0xFF            // Port direction states
-#define INS     0
-
-#define SET(arg1)   CTRL |= arg1
-#define CLR(arg1)   CTRL &= ~arg1
-
 typedef struct
 {
     BYTE font;                  // Font to use
